@@ -17,8 +17,6 @@ int main() {
     } catch (string& e) {
         cout << e << " ";
     }
-    cout << endl;
-
     // insert just one element to queue A
     queueA.enqueue(-5);
 
@@ -26,7 +24,6 @@ int main() {
     cout << "queue A length: " << queueA.getLength() << " ";
     cout << "queue A front: "  << queueA.front()     << " ";
     cout << "queue A back: "   << queueA.back()      << " ";
-    cout << endl;
 
     // now remove the single element from queue A
     queueA.dequeue();
@@ -47,7 +44,6 @@ int main() {
     for (int i = 0; i < queueA.getMaxSize(); i++) {
         queueA.enqueue(i);
     }
-    cout << endl;
 
     // ensure that queue A is now full
     if (queueA.isFull()) {
@@ -56,13 +52,11 @@ int main() {
     else {
         cout << "queue A is not full [ERROR] ";
     }
-    cout << endl;
 
     // display its length, front, and back
     cout << "queue A length: " << queueA.getLength() << " ";
     cout << "queue A front: "  << queueA.front()     << " ";
     cout << "queue A back: "   << queueA.back()      << " ";
-    cout << endl;
 
     // make a copy of queue A
     ArrayQueue<int> queueB = queueA;
@@ -74,7 +68,6 @@ int main() {
         queueA.dequeue();
     }
     cout << " ";
-    cout << endl;
 
     // queue A should now be empty
     if (queueA.isEmpty()) {
@@ -83,13 +76,11 @@ int main() {
     else {
         cout << "queue A is not empty [ERROR] ";
     }
-    cout << endl;
 
     // display queue B length, front, and back
     cout << "queue B length: " << queueB.getLength() << " ";
     cout << "queue B front: "  << queueB.front()     << " ";
     cout << "queue B back: "   << queueB.back()      << " ";
-    cout << endl;
 
     // make a copy of queue B
     ArrayQueue<int> queueC;
@@ -105,7 +96,6 @@ int main() {
     else {
         cout << "queue B is not empty [ERROR] ";
     }
-    cout << endl;
 
     // display queue C length, front, and back
     cout << "queue C length: " << queueC.getLength() << " ";
