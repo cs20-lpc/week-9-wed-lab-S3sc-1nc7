@@ -31,7 +31,7 @@ template <typename T>
 T ArrayQueue<T>::back() const {
     // TODO
     if (isEmpty()) {
-        throw string("Queue is empty");
+        throw string("back: error, queue is empty, cannot access the back");
     }
     return buffer[backIndex];
 }
@@ -83,7 +83,7 @@ void ArrayQueue<T>::enqueue(const T& elem) {
 template <typename T>
 T ArrayQueue<T>::front() const {
     if (isEmpty()) {
-        throw string("Queue is empty");
+        throw string("front: error, queue is empty, cannot access the front");
     }
 	return buffer[frontIndex];
     // TODO
